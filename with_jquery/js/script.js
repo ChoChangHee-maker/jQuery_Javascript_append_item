@@ -28,4 +28,13 @@ var item = [ 'HTML' , 'CSS' ];
 var item1 = $('<div>').text(item[0]);
 var item2 = $('<div>').text(item[1]);
 
-$('#stackList').append();
+$('#stackList').append(item1);
+$('#stackList').append(item2);
+
+$('#add').on('click',function(){
+   
+    var value = $('#stack').val();
+    
+    item.push(value);
+    
+});
