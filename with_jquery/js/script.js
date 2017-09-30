@@ -23,9 +23,25 @@
 //    list.append(item);
 //});
 
-var item = [ 'HTML' , 'CSS' ];
+var item = [ 'HTML' , 'CSS' ]; //백엔드로 부터 받은 데이터
 
-var item1 = $('<div>').text(item[0]);
+function view(arr){
+ 
+    for ( var i = 0; i < arr.length; i++ ) {
+        
+        var tag = $('<div>').text(arr[i]);
+        $('#stackList').empty().append(tag);
+    }
+}
+
+$('#add').on('click',function(){
+    
+    view(item);
+});
+
+view(item);
+
+/* var item1 = $('<div>').text(item[0]);
 var item2 = $('<div>').text(item[1]);
 
 $('#stackList').append(item1);
@@ -37,4 +53,6 @@ $('#add').on('click',function(){
     
     item.push(value);
     
-});
+    var tag = $('<div>').text(value);
+    $('#stacklist').append(tag);
+}); */
